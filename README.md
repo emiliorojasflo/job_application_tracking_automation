@@ -185,18 +185,3 @@ ensures status only advances; terminal states are sticky.
 Claude Haiku 4.5 costs about $0.001 per email classified. For a heavy
 job-search month (~500 candidate emails), expect well under a dollar total.
 Processed emails are labeled and never re-classified.
-
-## What's not built yet
-
-- **Outlook support** — would need a separate Power Automate flow writing
-  to the same Sheet.
-- **"Ghosted" auto-status** — a daily trigger that flips non-terminal
-  applications to `Ghosted` after 30 days of silence. Easy add.
-- **Push notifications** — Gmail push requires a GCP project with Pub/Sub.
-  Polling every 5 minutes was the pragmatic call.
-- **Web UI** — the Sheet *is* the UI. If demand emerged, a Next.js front
-  end could read the same Sheet via the Sheets API.
-
-## License
-
-MIT — do whatever you want with it.
